@@ -87,7 +87,7 @@ jobs:
       id: organize
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: |
-        nkdir openwrt/configfile
+        mkdir openwrt/configfile
         cp openwrt/.config  openwrt/configfile        
         cd openwrt/configfile
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
