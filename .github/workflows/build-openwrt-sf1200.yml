@@ -58,8 +58,8 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git config  user.email "maxmib@qq.com" 
-        git config  user.name "maxmib"
+        git config --global user.email "maxmib@qq.com" 
+        git config --global user.name "maxmib"
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
         python3 setup.py -c config-siflower-18.x.yml
