@@ -60,6 +60,8 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
+        git config  user.email "maxmib@qq.com" 
+        git config  user.name "maxmib"
         python3 setup.py -c config-siflower-18.x.yml
         ln -sf /workdir/openwrt/openwrt-18.06/siflower/openwrt-18.06 $GITHUB_WORKSPACE/openwrt
 
