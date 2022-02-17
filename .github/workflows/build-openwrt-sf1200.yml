@@ -61,8 +61,6 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
         python3 setup.py -c config-siflower-18.x.yml
-        cd openwrt-18.06/siflower/
-        git pull
         ln -sf /workdir/openwrt/openwrt-18.06/siflower/openwrt-18.06 $GITHUB_WORKSPACE/openwrt
 
     - name: Load custom feeds
