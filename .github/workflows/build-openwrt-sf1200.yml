@@ -62,6 +62,7 @@ jobs:
         git config --global user.email "maxmib@qq.com" 
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
+        cp configs/config-siflower-18.x.yml /workdir/openwrt/
         python3 setup.py -c config-siflower-18.x.yml
         ln -sf /workdir/openwrt/openwrt-18.06/siflower/openwrt-18.06 $GITHUB_WORKSPACE/openwrt
 
