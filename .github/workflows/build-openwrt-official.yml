@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt erx
+name: Build OpenWrt erx official
 
 on:
   repository_dispatch:
