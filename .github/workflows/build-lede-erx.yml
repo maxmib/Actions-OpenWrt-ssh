@@ -178,9 +178,11 @@ jobs:
         files: ${{ env.FIRMWARE }}/*
 
     - name: Delete workflow runs
-      uses: GitRML/delete-workflow-runs@main
+      uses: Mattraks/delete-workflow-runs@main
       with:
-        retain_days: 1
+        token: ${{github.token}}
+        repository: ${{github.repository}}
+        retain_days: 10
         keep_minimum_runs: 3
 
     - name: Remove old Releases
