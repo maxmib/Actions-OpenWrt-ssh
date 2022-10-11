@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build  openwrt wr1200js test
+name: Build  openwrt wr1200js 22.03
 
 on:
   repository_dispatch:
