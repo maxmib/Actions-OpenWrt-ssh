@@ -182,7 +182,7 @@ jobs:
       with:
         token: ${{github.token}}
         repository: ${{github.repository}}
-        retain_days: 10
+        retain_days: 5
         keep_minimum_runs: 3
 
     - name: Remove old Releases
