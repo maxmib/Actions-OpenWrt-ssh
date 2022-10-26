@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt SF1200
+name: Build Siflower OpenWrt SF1200
 
 on:
   repository_dispatch:
