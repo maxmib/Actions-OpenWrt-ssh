@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build official openwrt wr1200js
+name: Build official openwrt hc5661 IPTV
 
 on:
   repository_dispatch:
@@ -23,7 +23,7 @@ env:
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: wr1200js-openwrt.config
+  CONFIG_FILE: hc5661-iptv.config
   DIY_P1_SH: diy3.sh
   DIY_P2_SH: diy4.sh
   UPLOAD_BIN_DIR: true
