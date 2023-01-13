@@ -66,10 +66,9 @@ jobs:
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Check commit
-      working-directory: /workdir
       if: (github.event.inputs.commit != null && github.event.inputs.commit != 'false') && !cancelled()
       run: | 
-        git reset --hard ${{github.event.inputs.commit}}
+        cd openwrt && git reset --hard ${{github.event.inputs.commit}}
 
     - name: Load custom feeds
       run: |
