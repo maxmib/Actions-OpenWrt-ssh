@@ -65,9 +65,9 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
-    - name: check commit
+    - name: Check commit
       working-directory: /workdir
-      if: (github.event.inputs.commit != null && github.event.inputs.ssh  != 'false') && !cancelled()
+      if: (github.event.inputs.commit != null && github.event.inputs.commit != 'false') && !cancelled()
       run: | 
         git reset --hard ${{github.event.inputs.commit}}
 
