@@ -67,7 +67,7 @@ jobs:
 
     - name: check commit
       working-directory: /workdir
-      if: (github.event.inputs.commit != null ) && !cancelled()
+      if: (github.event.inputs.commit != null && github.event.inputs.ssh  != 'false') && !cancelled()
       run: | 
         git reset --hard ${{github.event.inputs.commit}}
 
