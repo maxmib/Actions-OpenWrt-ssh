@@ -18,6 +18,10 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
+      commit:
+        description: 'Github repo commit'
+        required: false
+        default: 'false'        
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
@@ -60,6 +64,11 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+
+    - name: Check commit
+      if: (github.event.inputs.commit != null && github.event.inputs.commit != 'false') && !cancelled()
+      run: | 
+        cd openwrt && git reset --hard ${{github.event.inputs.commit}}
 
     - name: Load custom feeds
       run: |
