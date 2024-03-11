@@ -115,5 +115,5 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
-          OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }} compile finished.
+          OpenWrt_firmware config compilation finished.
 
