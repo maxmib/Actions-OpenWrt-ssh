@@ -22,6 +22,6 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-ser
 git clone https://github.com/jerrykuku/luci-theme-argon.git  package/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config.git  package/luci-app-argon-config
 git clone https://github.com/honwen/luci-app-aliddns.git  package/luci-app-aliddns
-git clone https://github.com/ximiTech/luci-app-msd_lite.git
+git clone https://github.com/ximiTech/luci-app-msd_lite.git  package/luci-app-msd_lite
 #git clone https://github.com/maxmib/luci-app-msd.git package/luci-app-msd
 #rm -rf package/lean/luci-theme-argon
