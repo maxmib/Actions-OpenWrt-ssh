@@ -112,11 +112,9 @@ jobs:
         sudo chown $USER:$GROUPS $GITHUB_WORKSPACE    
 
     - name: Clone source code
-      working-directory: /workdir
+      working-directory: ./
       run: |
-        df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
-        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Check commit
       if: (github.event.inputs.commit != null && github.event.inputs.commit != 'false') && !cancelled()
