@@ -59,7 +59,7 @@ jobs:
           ^G\+\+$
           Clang
           LLVM
-        docker_include: ".+"
+#        docker_include: ".+"
         docker_prune: "True"
         docker_clean: "True"
         apt_prune: "True"
