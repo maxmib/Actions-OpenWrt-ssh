@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build official openwrt mt3000  
+name: Build official openwrt mt3000    
 
 on:
   repository_dispatch:
@@ -59,7 +59,7 @@ jobs:
           ^G\+\+$
           Clang
           LLVM
-        docker_include: ".+"
+#        docker_include: ".+"
         docker_prune: "True"
         docker_clean: "True"
         apt_prune: "True"
@@ -79,7 +79,7 @@ jobs:
         remove-android: 'true'
         remove-haskell: 'true'
         remove-codeql: 'true'
-        remove-docker-images: 'true'
+#        remove-docker-images: 'true'
 
     - name: Free up disk space complete
       run: |
