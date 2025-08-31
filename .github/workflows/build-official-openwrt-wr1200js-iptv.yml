@@ -148,7 +148,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.STATUS == 'success' && !cancelled()
       with:
-        name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt_firmware${{ env.DEVICE_NAME }}_IPTV${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
@@ -215,5 +215,5 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
-          OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }} compilation finished.
+          OpenWrt_firmware${{ env.DEVICE_NAME }}_IPTV${{ env.FILE_DATE }} compilation finished.
 
