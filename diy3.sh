@@ -30,4 +30,4 @@ git clone https://github.com/honwen/luci-app-aliddns.git  package/luci-app-alidd
 git clone https://github.com/maxmib/luci-app-msd-lite.git package/luci-app-msd_lite
 #rm -rf package/lean/luci-theme-argon
 #rm -rf package/luci-app-xfrpc
-git clone https://github.com/liudf0716/luci-app-xfrpc.git package/luci-app-xfrpc
+git clone https://github.com/liudf0716/luci-app-xfrpc.git package/luci-app-xfrpc1
