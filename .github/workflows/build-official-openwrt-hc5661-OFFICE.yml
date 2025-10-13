@@ -21,7 +21,7 @@ on:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
-  REPO_BRANCH: openwrt-22.03
+  REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: hc5661-office-2203.config
   DIY_P1_SH: diy3.sh
@@ -200,4 +200,4 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
-          OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }} compilation finished.
+          OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}_$REPO_BRANCH compilation finished.
