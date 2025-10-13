@@ -23,7 +23,7 @@ env:
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: hc5661-office-2203.config
+  CONFIG_FILE: hc5661-office-2102.config
   DIY_P1_SH: diy3.sh
   DIY_P2_SH: diy4.sh
   UPLOAD_BIN_DIR: true
